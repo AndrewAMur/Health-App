@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    tools:ignore="UnusedNavigation"
+    app:startDestination="@id/photoFragment2">
+    <fragment
+        android:id="@+id/photoFragment2"
+        android:name="com.example.healthapp.PhotoFragment"
+        android:label="fragment_photo"
+        tools:layout="@layout/fragment_photo" />
+    <fragment
+        android:id="@+id/voiceFragment"
+        android:name="com.example.healthapp.VoiceFragment"
+        android:label="fragment_voice"
+        tools:layout="@layout/fragment_voice" />
+    <fragment
+        android:id="@+id/surveyFragment"
+        android:name="com.example.healthapp.surveyFragment"
+        android:label="fragment_survey"
+        tools:layout="@layout/fragment_survey" />
+    <fragment
+        android:id="@+id/scarletFragment"
+        android:name="com.example.healthapp.ScarletFragment"
+        android:label="fragment_scarlet"
+        tools:layout="@layout/fragment_scarlet" />
+</navigation>

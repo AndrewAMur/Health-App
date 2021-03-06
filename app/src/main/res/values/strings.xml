@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Health App</string>
+    <string name="record_breathing">Record Breathing</string>
+    <string name="how_many_breaths_will_you_take">How many breaths will you take</string>
+    <string name="textview">TextView</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="button1" tools:ignore="DuplicateDefinition">Button</string>
+    <string name="button2">Button</string>
+    <string name="take_a_picture">Take a Picture</string>
+    <string name="voice">Voice</string>
+    <string name="photo">Photo</string>
+    <string name="button">Button</string>
+    <string name="scarlet_fever">Scarlet Fever</string>
+    <string name="scarlet_fever_is_a_desease_that_originates_in_mostly_kids">Scarlet Fever is a desease that originates in mostly kids.</string>
+    <string name="scarlet_fever_scarlatina_is_a_desease_that_originates_in_mostly_kids_who_have_strep_throat_or_strep_skin_infections">Scarlet Fever/Scarlatina is a desease that originates in mostly kids who have strep throat or strep skin infections.</string>
+    <string name="scarlet_fever_scarlatina_is_a_disease_that_is_found_in_mostly_kids_who_have_strep_throat_or_strep_skin_infections">scarlet fever scarlatina is a disease that is found in mostly kids who have strep throat or strep skin infections</string>
+</resources>
