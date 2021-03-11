@@ -13,6 +13,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+
         val photoFragment = PhotoFragment()
         val voiceFragment = VoiceFragment()
         val surveyFragment = SurveyFragment()
