@@ -1,20 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    tools:context=".ScarletFragment">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="0dp"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:baselineAligned="false"
-        android:text="@string/scarlet_fever"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
-        android:textSize="75sp" />
+        android:orientation="vertical"
+        tools:context=".ScarletFragment">
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/textView"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:baselineAligned="false"
+            android:text="@string/scarlet_fever"
+            android:textColor="@color/colorPrimary"
+            android:textSize="45sp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:text="Overview"
+            android:paddingBottom="10dp"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="Scarlet fever is a bacterial illness that develops in some people who have strep throat. Also known as scarlatina, scarlet fever features a bright red rash that covers most of the body. Scarlet fever is almost always accompanied by a sore throat and a high fever.
+
+Scarlet fever is most common in children 5 to 15 years of age. Although scarlet fever was once considered a serious childhood illness, antibiotic treatments have made it less threatening. Still, if left untreated, scarlet fever can result in more-serious conditions that affect the heart, kidneys and other parts of the body."
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:text="Symptoms"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="The signs and symptoms that give scarlet fever its name include:
+
+Red rash. The rash looks like a sunburn and feels like sandpaper. It typically begins on the face or neck and spreads to the trunk, arms and legs. If pressure is applied to the reddened skin, it will turn pale.
+Red lines. The folds of skin around the groin, armpits, elbows, knees and neck usually become a deeper red than the surrounding rash.
+Flushed face. The face may appear flushed with a pale ring around the mouth.
+Strawberry tongue. The tongue generally looks red and bumpy, and it's often covered with a white coating early in the disease.
+The rash and the redness in the face and tongue usually last about a week. After these signs and symptoms have subsided, the skin affected by the rash often peels. Other signs and symptoms associated with scarlet fever include:
+
+Fever of 101 F (38.3 C) or higher, often with chills
+Very sore and red throat, sometimes with white or yellowish patches
+Difficulty swallowing
+Enlarged glands in the neck (lymph nodes) that are tender to the touch
+Nausea or vomiting
+Headache
+When to see a doctor
+Talk to your doctor if your child has a sore throat with:
+
+A fever of 102 F (38.9 C) or higher
+Swollen or tender glands in the neck
+A red rash"
+            />
+    </LinearLayout>
+
+</ScrollView>

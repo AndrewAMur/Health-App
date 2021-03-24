@@ -1,9 +1,12 @@
 package com.example.healthapp.Fragments
 
 import android.app.Activity.RESULT_OK
+import android.content.Context
 import android.content.Intent
 import android.graphics.BitmapFactory
+import android.graphics.Color
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.os.Environment
 import android.os.Handler
@@ -12,6 +15,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
+import androidx.annotation.RequiresApi
 import androidx.core.content.FileProvider
 import androidx.fragment.app.Fragment
 import com.example.healthapp.R
@@ -25,6 +30,7 @@ import java.util.*
 class PhotoFragment : Fragment() {
 
     var pictureTaken = false
+    var details = false
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -43,37 +49,66 @@ class PhotoFragment : Fragment() {
 
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    fun initialize_layout(){
         btn_photo.setOnClickListener {
             dispatchTakePictureIntent()
         }
         btn_analyze.setOnClickListener {
             txt_diagnosis.visibility = View.VISIBLE
+            layout_linear.setBackgroundColor(Color.WHITE)
             if (pictureTaken){
                 val handler = Handler()
                 handler.postDelayed(
-                    Runnable { txt_diagnosis.setText(".") },
+                    Runnable { txt_diagnosis.setText("Condition: .") },
                     0
                 )
                 handler.postDelayed(
-                    Runnable { txt_diagnosis.setText("..") },
+                    Runnable { txt_diagnosis.setText("Condition: ..") },
                     1000
                 )
                 handler.postDelayed(
-                    Runnable { txt_diagnosis.setText("...") },
+                    Runnable { txt_diagnosis.setText("Condition: ...") },
                     3000
                 )
                 handler.postDelayed(
-                    Runnable { txt_diagnosis.setText("Scarlet Fever") },
+                    Runnable { txt_diagnosis.setText("Condition: Scarlet Fever ⓘ") },
                     6000
                 )
+                layout_linear.setOnClickListener {
+                    setViewLayout(R.layout.fragment_scarlet);
+                    details = true;
+                }
             }
             else{
                 txt_diagnosis.setText("No picture to analyze")
             }
 
         }
+    }
+
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        activity?.onBackPressedDispatcher?.addCallback(viewLifecycleOwner, object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                if (details){
+                    setViewLayout(R.layout.fragment_photo)
+                    initialize_layout()
+                }
+            }
+        })
+
+        initialize_layout()
+
+    }
+
+    private fun setViewLayout(id: Int) {
+        val inflater = activity?.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        var mainView = inflater.inflate(id, null)
+        val rootView = view as ViewGroup?
+        rootView!!.removeAllViews()
+        rootView.addView(mainView)
     }
 
     val REQUEST_IMAGE_CAPTURE = 1
@@ -110,6 +145,7 @@ class PhotoFragment : Fragment() {
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             setPic()
             pictureTaken = true
+            btn_analyze.visibility = View.VISIBLE
         }
     }
 
@@ -157,6 +193,5 @@ class PhotoFragment : Fragment() {
             currentPhotoPath = absolutePath
         }
     }
-
 
 }
