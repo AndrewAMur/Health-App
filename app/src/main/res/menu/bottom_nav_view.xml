@@ -3,13 +3,17 @@
     <item
         android:id="@+id/photo_id"
         android:icon="@drawable/ic_camera_clipart"
-        android:title="Cam"/>
-    <item
-        android:id="@+id/voice_id"
-        android:icon="@drawable/ic_mic_clipart"
-        android:title="Mic"/>
+        android:title="Camera"/>
+
     <item
         android:id="@+id/survey_id"
         android:icon="@drawable/ic_survey_clipart"
         android:title="Survey"/>
+
+    <!--
+    <item
+        android:id="@+id/voice_id"
+        android:icon="@drawable/ic_mic_clipart"
+        android:title="Mic"/>
+    -->
 </menu>

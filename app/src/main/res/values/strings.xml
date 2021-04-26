@@ -19,4 +19,14 @@
     <string name="roseola">Roseola</string>
     <string name="symptoms">Symptoms</string>
 
+    <string name="Chickenpox"> https://www.cdc.gov/chickenpox/about/index.html</string>
+    <string name="HfandM"> https://www.cdc.gov/hand-foot-mouth/index.html"</string>
+    <string name="Measles"> https://www.cdc.gov/measles/index.html">Measles</string>
+    <string name="Mumps"> https://www.cdc.gov/mumps/index.html</string>
+    <string name="Roseola"> https://www.mayoclinic.org/diseases-conditions/roseola/symptoms-causes/syc-20377283</string>
+    <string name="Rubella"> https://www.cdc.gov/rubella/index.html</string>
+    <string name="ScarletFever"> https://www.cdc.gov/groupastrep/diseases-public/scarlet-fever.html</string>
+    <string name="Scd"> https://www.cdc.gov/ncbddd/sicklecell/index.html</string>
+    <string name="Skin"> None</string>
+
 </resources>
