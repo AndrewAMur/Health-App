@@ -159,7 +159,7 @@ class PhotoFragment : Fragment() {
                 hashMap["Roseola"] = "Roseola ⓘ"
                 hashMap["Rubella"] = "Rubella ⓘ"
                 hashMap["Scarlet Fever"] = "Scarlet Fever ⓘ"
-                hashMap["Scd"] = "Sickle Cell Disease (SCD) ⓘ"
+                hashMap["Scd"] = "Slapped Cheek Disease (SCD) ⓘ"
                 hashMap["Skin"] = "None"
 
                 val txt_prediction = hashMap[prediction]

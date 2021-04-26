@@ -26,7 +26,7 @@
     <string name="Roseola"> https://www.mayoclinic.org/diseases-conditions/roseola/symptoms-causes/syc-20377283</string>
     <string name="Rubella"> https://www.cdc.gov/rubella/index.html</string>
     <string name="ScarletFever"> https://www.cdc.gov/groupastrep/diseases-public/scarlet-fever.html</string>
-    <string name="Scd"> https://www.cdc.gov/ncbddd/sicklecell/index.html</string>
-    <string name="Skin"> None</string>
+    <string name="Scd"> https://www.cdc.gov/parvovirusb19/fifth-disease.html</string>
+    <string name="Skin"> https://www.cdc.gov</string>
 
 </resources>
